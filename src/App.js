@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import Loading from './components/LoadingPage';
+import Navbar from './components/Navbar';
+import LandingPage from './components/LandingPage';
+import Branding from './components/Branding';
+import Message from './components/Message';
+import Product from './components/WhyOurProduct';
+import BestSellers from './components/BestSellingProducts';
+import BrandMessage from './components/BrandMessage';
+import ProductGrid from './components/ProductGrid';
+import FAQ from './components/FAQ';
+import Footer from './components/Footer';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const App = () => {
+  const [showLoading, setShowLoading] = useState(true);
+  const [isFading, setIsFading] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsFading(true); // start fade-out
+      setTimeout(() => {
+        setShowLoading(false); // fully remove after fade
+      }, 600); // match transition duration
+    }, 4300); // when loading count finishes
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return showLoading ? (
+    <div
+      className={`transition-opacity duration-500 ease-in-out ${
+        isFading ? 'opacity-0' : 'opacity-100'
+      }`}
+    >
+<Loading onFinish={() => setShowLoading(false)} />
+     </div>
+  ) : (
+    <>
+      <Navbar />
+      <LandingPage />
+      <Branding />
+      <Message />
+      <Product />
+      <BestSellers />
+      <BrandMessage />
+      <ProductGrid />
+      <FAQ />
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
