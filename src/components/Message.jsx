@@ -5,9 +5,9 @@ export default function Message() {
     "Experience the ultimate in skincare with our expertly formulated products,",  
     "crafted to nourish, protect, and rejuvenate your skin. Combining the finest", 
     "natural ingredients with advanced science, our collection ensures every",     
-    "skin type can achieve a radiant, healthy glow. Embrace your beauty with",   
-    "confidence every day. Discover the transformative power of our",            
-    "products designed to protect, repair, and rejuvenate",                       
+    "skin type can achieve a radiant, healthy glow. Embrace your beauty with",     
+    "confidence every day. Discover the transformative power of our",              
+    "products designed to protect, repair, and rejuvenate",                        
     "your skin for lasting radiance and health."                                   
   ];
 
@@ -19,28 +19,16 @@ export default function Message() {
       setVisibleWordCount((prev) => (prev < words.length ? prev + 1 : prev));
     }, 100);
     return () => clearInterval(interval);
-  }, []);
+  }, [words.length]);
 
   let wordCounter = 0;
 
   return (
     <div
-      className="w-full pb-40 overflow-x-hidden"
-      style={{
-        backgroundColor: 'rgba(254, 255, 244, 1)',
-        paddingTop: '80px',
-        paddingLeft: '40px',
-        paddingRight: '40px',
-      }}
+      className="w-full pb-20 md:pb-40 overflow-hidden bg-[#FEFFF4] px-4 sm:px-6 md:px-20 pt-20"
     >
       <div
-        style={{
-          fontSize: '50px',
-          lineHeight: '3.8rem',
-          color: '#0f172a',
-          fontWeight: 400,
-          textAlign: 'left',
-        }}
+        className="text-[20px] sm:text-[26px] md:text-[33px] leading-relaxed md:leading-[3.8rem] text-[#0f172a] font-normal text-left break-words max-w-full"
       >
         {text.map((line, index) => (
           <div key={index}>

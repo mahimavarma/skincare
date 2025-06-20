@@ -65,7 +65,7 @@ export default function BestSellers() {
                   alt={product.title}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute bottom-0 left-10 right-10 bottom-4 flex justify-between items-center px-6 py-4 bg-[#FEFFF4]/90 backdrop-blur-md rounded-lg">
+                <div className="absolute bottom-0 left-10 right-10 bottom-4 flex justify-between items-left px-6 py-4 bg-[#FEFFF4]/90 backdrop-blur-md rounded-lg">
                   <div>
                     <h3 className="text-[#2D3B36] font-medium text-lg">{product.title}</h3>
                     <p className="text-[#4b4b4b] text-sm">{product.price}</p>

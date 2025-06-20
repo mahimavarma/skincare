@@ -29,10 +29,17 @@ export default function WhyOurProducts() {
           </div>
 
           <div>
-            <h3 className="text-xl text-[60px] flex items-center gap-2">
-              <span className="text-[60px] font-regular leading-[1] bg-gradient-to-b from-[#293330] to-[#FEFFF4] bg-clip-text text-transparent inline-block">02</span>
-              <span className="text-[#2D3B36] ml-[50px] text-[60px]">Everything Natural</span>
-            </h3>
+   <h3 className="flex items-center gap-2 text-[60px]">
+  {/* Number 02 */}
+  <span className="font-regular leading-[1] bg-gradient-to-b from-[#293330] to-[#FEFFF4] bg-clip-text text-transparent">
+    02
+  </span>
+
+  {/* Everything Natural in one line with space */}
+  <span className="text-[#2D3B36] ml-[50px] tracking-wide text-[50px]">
+    Everything&nbsp;Natural
+  </span>
+</h3>
             <p className="text-[#4b4b4b] text-sm max-w-sm mt-10 ml-[130px] text-[18px] mb-[100px]">
               Pure ingredients for pure skin. The Perfect solution for your skin care needs.
             </p>
