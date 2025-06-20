@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 
 export default function Message() {
   const text = [
-    "Experience the ultimate in skincare with our expertly formulated products,",  // Line 1
-    "crafted to nourish, protect, and rejuvenate your skin. Combining the finest", // Line 2
-    "natural ingredients with advanced science, our collection ensures every",     // Line 3
-    "skin type can achieve a radiant, healthy glow. Embrace your beauty with",     // Line 4
-    "confidence every day. Discover the transformative power of our",              // Line 5
-    "products designed to protect, repair, and rejuvenate",                        // Line 6
-    "your skin for lasting radiance and health."                                   // Line 7
+    "Experience the ultimate in skincare with our expertly formulated products,",  
+    "crafted to nourish, protect, and rejuvenate your skin. Combining the finest", 
+    "natural ingredients with advanced science, our collection ensures every",     
+    "skin type can achieve a radiant, healthy glow. Embrace your beauty with",   
+    "confidence every day. Discover the transformative power of our",            
+    "products designed to protect, repair, and rejuvenate",                       
+    "your skin for lasting radiance and health."                                   
   ];
 
   const words = text.join(' ').split(' ');

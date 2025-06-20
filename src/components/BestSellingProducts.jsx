@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-
-import cartIcon from '../assets/cartIcon.svg';
 import arrowLeft from '../assets/arrowLeft.svg';
 import arrowRight from '../assets/arrowRight.svg';
 import alyaImage from '../assets/caraousel1.png';
@@ -45,7 +43,6 @@ export default function BestSellers() {
 
   return (
     <section className="bg-[#FEFFF4] w-full px-4 md:px-12 py-16">
-      {/* Heading Row */}
       <div className="flex justify-between items-center mb-12 flex-wrap gap-4">
         <div className="flex items-center gap-2 px-4 py-2 border border-[#2D3B36] rounded-full text-[#2D3B36] text-sm font-medium ml-12">
           <span className="w-3 h-3 rounded-full bg-[#2D3B36]"></span>

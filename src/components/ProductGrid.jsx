@@ -31,13 +31,10 @@ export default function ProductGrid() {
 
   return (
     <section className="bg-[#FEFFF4] w-full px-4 md:px-12 py-16 text-center">
-      {/* Heading */}
       <h2 className="text-[40px] md:text-[50px] text-[#2D3B36]  mb-6">
         Feel Beautiful Inside and Out <br className="hidden md:block" />
         with Every Product.
       </h2>
-
-      {/* Filter Buttons */}
       <div className="flex flex-wrap justify-center gap-3">
         {categories.map((category) => (
           <button

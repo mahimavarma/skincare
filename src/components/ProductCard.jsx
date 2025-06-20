@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import cartIcon from '../assets/cartIcon.svg'; // Regular cart icon
-import cartFilledIcon from '../assets/cartFilled.svg'; // ADD THIS ICON (from your filled version)
+import cartIcon from '../assets/cartIcon.svg'; 
+import cartFilledIcon from '../assets/cartFilled.svg'; 
 import alyaImage from '../assets/caraousel1.png';
 import sakuraImage from '../assets/caraousel2.png';
 import bodyLotionImage from '../assets/caraousel3.png';
@@ -49,7 +49,6 @@ export default function BestSellers() {
 
   return (
     <section className="bg-[#FEFFF4] w-full px-4 md:px-12 py-16">
-      {/* Products Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {visibleProducts.map((product, i) => {
           const globalIndex = (startIndex + i) % products.length;
@@ -60,15 +59,12 @@ export default function BestSellers() {
               key={i}
               className="bg-white rounded-2xl shadow-sm overflow-hidden relative"
             >
-              {/* Image */}
               <div className="relative w-full h-[770px] w-[560px]">
                 <img
                   src={product.image}
                   alt={product.title}
                   className="w-full h-full object-cover"
                 />
-
-                {/* Overlay */}
                 <div className="absolute bottom-0 left-10 right-10 bottom-4 flex justify-between items-center px-6 py-4 bg-[#FEFFF4]/90 backdrop-blur-md rounded-lg">
                   <div>
                     <h3 className="text-[#2D3B36] font-medium text-lg">{product.title}</h3>
